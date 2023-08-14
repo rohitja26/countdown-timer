@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+      <div class="container">
+        <div class="counter">
+          <div class="form-title">
+            <h2>Time Counter</h2>
+          </div>
+          <p>
+            <span class="req">*</span>
+            <i>--required</i>
+          </p>
+          <form action="counter" method="get" autocomplete="off">
+            <div class="form-field choose-type">
+              <label for="type">
+                Type
+                <span class="req">*</span>
+              </label>
+              <div class="types">
+                <div class="type d">
+                  <input
+                    type="radio"
+                    name="type"
+                    id="bydate"
+                    checked
+                    value="d"
+                  />
+                  <label for="bydate" style="cursor: pointer">Date</label>
+                </div>
+                <div class="type w">
+                  <input
+                    type="radio"
+                    name="type"
+                    id="byweek"
+                    checked
+                    value="w"
+                  />
+                  <label for="byweek" style="cursor: pointer" ;>Weekday</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-field form-date">
+              <label for="dt" class="label"
+                >Choose date for timer:<span class="req">*</span></label
+              >
+              <input
+                type="date"
+                name="dt"
+                id="date"
+                required="required"
+              />
+              <div class="tip">
+                *It can be date in the future or in the past (you'll see how
+                much time passed)
+              </div>
+            </div>
+            <div class="form-field form-weekday active">
+              <label for="wday" class="label"
+                >Choose Weekday:<span class="req">*</span></label
+              >
+              <select name="wday" id="wday" required="required">
+                <option value="1">Monday</option>
+                <option value="2">Tuesday</option>
+                <option value="3">Wednesday</option>
+                <option value="4">Thursday</option>
+                <option value="5">Friday</option>
+                <option value="6">Saturday</option>
+                <option value="7">Sunday</option>
+              </select>
+            </div>
+            <div class="form-field" >
+              <label for="time" class="label">Time</label>
+              <input type="time" name="h1" id="time" />
+            </div>
+            <div class="form-field">
+              <label for="title" class="label">Title</label>
+              <input type="text" name="h1" placeholder="Happy Birthday" />
+              <div class="tip">*Max 255 Words</div>
+            </div>
+            <div class="form-field">
+              <label for="Txt" class="label">Text</label>
+              <textarea
+                name="txt"
+                maxlength="300"
+                placeholder="Birthday wishes"
+              ></textarea>
+              <div class="tip">*Max 300 Words</div>
+            </div>
+            <div class="form-field">
+              <h3>Choose Your Timer BackGround</h3>
+              <div class="backgrounds">
+                <div class="bg">
+                  <input type="radio" name="bg" id="bg0" value="0" />
+                  <label
+                    for="bg0"
+                    style="background-image: url(Backgrounds/bg-1.jpg)"
+                  ></label>
+                </div>
+                <div class="bg">
+                  <input type="radio" name="bg" id="bg1" value="1" />
+                  <label
+                    for="bg1"
+                    style="background-image: url(Backgrounds/bg-2.jpg)"
+                  ></label>
+                </div>
+                <div class="bg">
+                  <input type="radio" name="bg" id="bg2" value="2" />
+                  <label
+                    for="bg2"
+                    style="background-image: url(Backgrounds/bg-3.jpg)"
+                  ></label>
+                </div>
+                <div class="bg">
+                  <input type="radio" name="bg" id="bg3" value="3" />
+                  <label
+                    for="bg3"
+                    style="background-image: url(Backgrounds/bg-4.jpg)"
+                  ></label>
+                </div>
+                <div class="bg">
+                  <input type="radio" name="bg" id="bg4" value="4" />
+                  <label
+                    for="bg4"
+                    style="background-image: url(Backgrounds/bg-5.jpg)"
+                  ></label>
+                </div>
+                <div class="bg">
+                  <input type="radio" name="bg" id="bg5" value="5" />
+                  <label
+                    for="bg5"
+                    style="background-image: url(Backgrounds/bg-6.jpg)"
+                  ></label>
+                </div>
+                <div class="bg own-Img" >
+                  <input type="radio" name="bg" id="bgCustom" value="custom" />
+                  <label for="bgCustom" title="Add your Background"
+                    >My Image
+                    <span class="material-icons">Image</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-field custom-img" style="display: none">
+                <input
+                  type="url"
+                  name="bgi"
+                  placeholder="http://google.com/myimage.JPG"
+                />
+                <div class="tip">*Link Your Background</div>
+              </div>
+            </div>
+            <a href="#timer"><button type="submit" id="create-countdown">Create My Countdown</button></a>
+          </form>
+        </div>
+      </div>
+    <div id="timer">
+      <div class="title" style="color: aliceblue;">Title</div>
+      <div class="countdown">
+        <div>
+          <p class="heading">DAY</p>
+          <div class="time" id="countdown-days" style="text-align: center">
+            0
+          </div>
+        </div>
+        <div>
+          <p class="heading">HOURS</p>
+          <div class="time" id="countdown-hours" style="text-align: center">
+            0
+          </div>
+        </div>
+        <div>
+          <p class="heading">MINUTES</p>
+          <div class="time" id="countdown-minutes" style="text-align: center">
+            0
+          </div>
+        </div>
+        <div>
+          <p class="heading">SECONDS</p>
+          <div class="time" id="countdown-seconds" style="text-align: center">
+            0
+          </div>
+        </div>
+      </div>
+      <div class="text" style="color:white ;">Love</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' , sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --header-color:#2b3b4e;
+    --wp--preset--color--black: #000000;
+    --wp--preset--color--cyan-bluish-gray: #abb8c3;
+    --wp--preset--color--white: #ffffff;
+    --wp--preset--color--pale-pink: #f78da7;
+    --wp--preset--color--vivid-red: #cf2e2e;
+    --wp--preset--color--luminous-vivid-orange: #ff6900;
+    --wp--preset--color--luminous-vivid-amber: #fcb900;
+    --wp--preset--color--light-green-cyan: #7bdcb5;
+    --wp--preset--color--vivid-green-cyan: #00d084;
+    --wp--preset--color--pale-cyan-blue: #8ed1fc;
+    --wp--preset--color--vivid-cyan-blue: #0693e3;
+    --wp--preset--color--vivid-purple: #9b51e0;
+    --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: 
+}
+h1, h2, h3{
+    font-family: "Montserrat Alternates",sans-serif;
+    text-shadow: -1px -1px 7px #fff, 0px 0px 7px #fff, 1px 1px 7px #fff, 1px -1px 7px #fff, -1px 1px 7px #fff, -1px -1px 3px #fff, 0px 0px 3px #fff, 1px 1px 3px #fff, 1px -1px 3px #fff, -1px 1px 3px #fff;
+}
+.container{
+    width: 100%;
+    height: 180vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+}
+.counter{
+    width: 100%;
+    max-width: 450px;
+    height: 150vh;
+    background: #eaedf3;
+    margin: 50px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.counter .form-title{
+    display: flex;
+    justify-content: left;
+    /* align-items: center; */
+    color: var(--header-color);
+}
+.counter p{
+    padding:  15px 10px;
+    font-size: 13px;
+    color: #7c88a1;
+}
+.req{
+    color: var(--wp--preset--color--vivid-red);
+}
+div{
+    display: block;
+}
+form{
+    color:#2b3b4e;
+    font-size: 14px;
+    font-weight: 525;
+}
+.counter .form-field {
+    /* font-family: 'Mont'; */
+    position: relative;
+    margin-bottom: 25px;
+}
+.counter .choose-type{
+    display: flex;
+    padding-left: 2px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.counter .types{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.counter .types .type{
+    padding-left:20px ;
+}
+.counter  .form-field.form-date{
+    display: none;
+}
+.counter  .form-field.form-date.active{
+    display: block;
+}
+.counter  .form-field.form-weekday {
+    display: none;
+}
+.counter  .form-field.form-weekday.active{
+    display: block;
+}
+
+.tip{
+    font-size: 10px;
+    margin: 5px;
+    color: #7c88a1;
+}
+input[type=text], .counter input[type=date], .counter textarea, .counter select{
+    padding: 11px 20px;
+    height: auto;
+    font-size: 12px;
+}
+input[type=text], input[type=date],input[type=time],input[type=url]{
+    background-color: #fff;
+    width: 100%;
+    border: 1px solid #d6dff2;
+    padding: 5px 25px;
+    border-radius: 15px;
+    min-height: 35px;
+    color: #424b5c;
+    margin-top: 5px;
+}
+select, textarea{
+    background-color: #fff;
+    width: 100%;
+    border: 1px solid #d6dff2;
+    padding: 5px 25px;
+    border-radius: 15px;
+    min-height: 35px;
+    color: #424b5c;
+    margin-top: 5px;
+}
+.counter .backgrounds{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.counter .backgrounds .bg{
+    position: relative;
+    height: 115px;
+    width: 32%;
+    max-width: 115px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+.my-countdown .bg label {
+    padding-left: 25px;
+}
+.counter .backgrounds [type=radio]{
+    position: absolute;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    right: 5px;
+}
+.counter .backgrounds label{
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    padding: 25px;
+    color: #7c88a1;
+    cursor: pointer;
+}
+.counter button[type=submit] {
+    margin: auto;
+    display: block;
+    padding: 15px 25px;
+    height: auto;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+button, a, input[type=submit] {
+    background-color: #424b5c;
+    border-color: #424b5c;
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    width: auto;
+    text-align: center;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+    border-width: 0;
+    text-decoration:none ;
+}
+
+
+
+#timer{
+    background-image: url(/Backgrounds/bg-6.jpg);
+    background-size: cover;
+    background-position:center ;
+}
+.countdown{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+}
+
+.heading {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow:3px -1px red;
+}
+
+.time {
+    background-color:transparent;
+    color: #fff;
+    text-shadow:3px -1px red;
+    font-size: 100px;
+    width: 150px;
+    margin: 0 10px;
+}
+
+#timer .title{
+    top: 43px;
+    display: flex;
+    justify-content:center;
+    
+}
